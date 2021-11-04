@@ -25,7 +25,7 @@ export default {
         htmlHackyThing =>
           htmlHackyThing.replace(
             '<base href="/">',
-            '<base href="/project-two/">'
+            '<base href="/project-3/">'
           ),
       ],
       injectServiceWorker: true,
