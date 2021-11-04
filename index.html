@@ -26,71 +26,24 @@
       font-weight: bold;
       padding: 40px;
     }
-    learning-card.two::part(icon) {
-      --learning-card-height: 150px;
-      --learning-card-width: 150px;
-      background-color: blue;
-    }
-    learning-card[type="science"]::part(icon) {
-      width: 200px;
-      height: 200px;
+    .joyful {
+      font-size: 2em;
     }
   </style>
-  <title>Project two: learning card</title>
+  <title>Project 3: HAXTheWeb</title>
 </head>
 
 <body>
   <ul class="menu">
-    <li><a href="#">Card demo</a></li>
+    <li><a href="#">Rename demo</a></li>
     <li><a href="/hax.html">HAX, card demo</a></li>
   </ul>
   <div class="wrapper">
-    <learning-card class="one"></learning-card>
-    <learning-card class="two" has-subheader>
-      <p>This is the card GENERIC</p>
-      <p slot="header">This is the card HEADER</p>
-      <p slot="content">This is the card CONTENT</p>
-      <p slot="subheader">This is the card SUBHEADER</p>
-    </learning-card>
-    <learning-card type="science"></learning-card>
+    <rename-me need="joy">Some inner text that will render out</rename-me>
+    <rename-me need="nothing"><div>You feel much shame.</div></rename-me>
   </div>
   <script type="module">
-    import "./src/app.js";
-    /**
-@table-in-the-corner/project-two
-https://github.com/table-in-the-corner/project-two
-
-@3b4b/project-two
-https://github.com/3B4B/project-two
-
-@thekodingkrab/project-two
-https://github.com/TheKodingKrab/project-two
-
-@ist-402-group-1/project-two
-https://github.com/IST-402-Group-1/project-two
-
-@penstat2/penstat-project2
-https://github.com/PenStat/penstat-project2
-
-@ist402groupf/learning-card
-https://github.com/IST402-Group-F/Project-2-Card
-
-@viable-slime/slime-card
-https://github.com/Viable-Slime/easy-card
-
-@paddyshub/project-two
-https://github.com/PaddysHub/project-two
-
-@runtimeerrorsmadeeasy/project-two
-https://github.com/runtimeErrorsMadeEasy/project2
-
-@ist402group19j/project-two
-https://github.com/ist402groupj/project-two
-
-@ist402/pj2card
-https://github.com/IST402/pj2temp
-
-*/ 
+    import "./rename-me.js";
   </script>
 </body>
 

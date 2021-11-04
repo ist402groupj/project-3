@@ -38,7 +38,7 @@
   <script src="../../../node_modules/@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
   <script src="../../../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
   <script type="module">
-    import "./src/app.js";
+    import '../rename-me.js';
     import "@lrnwebcomponents/h-a-x/h-a-x.js";
     import("@polymer/polymer/lib/utils/settings.js").then((esModule) => {
       esModule.setPassiveTouchGestures(true);
@@ -53,6 +53,8 @@
   </ul>
   <div class="hax-wrapper">
     <h-a-x app-store='{"url": "assets/appstore.json"}' element-align="right">
+      <p>Stuff and thigns</p>
+      <rename-me value="This is editable"></rename-me>
       <p>Cool stuff. Let's write about spongebob!</p>
       <grid-plate layout="1-1-1">
       <meme-maker slot="col-1" alt="happy dance GIF by SpongeBob SquarePants" image-url="https://media0.giphy.com/media/nDSlfqf0gn5g4/giphy.gif" bottom-text="We Are" top-text="Ready">
