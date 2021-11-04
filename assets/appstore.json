@@ -3,6 +3,9 @@
     "autoloader": {
       "rename-me": "./rename-me.js",
       "meme-maker": "@lrnwebcomponents/meme-maker/meme-maker.js",
+      "multiple-choice": "@lrnwebcomponents/multiple-choice/multiple-choice.js",
+      "retro-card": "@lrnwebcomponents/retro-card/retro-card.js",
+      "self-check": "@lrnwebcomponents/self-check/self-check.js",
       "wikipedia-query": "@lrnwebcomponents/wikipedia-query/wikipedia-query.js",
       "grid-plate": "@lrnwebcomponents/grid-plate/grid-plate.js"
     },
