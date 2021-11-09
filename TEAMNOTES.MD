@@ -48,8 +48,10 @@ These are dedicated status check-ins as this is a multi-week project
 ### What properties need mapped to HAX / the storybook? What can the user interact with?
 - 
 ### Check-in 2
-- 
-- 
+-  We are planning to meet this week to work on Project 3 
+-  We plan to delegate tasks between the team members so that each person is working on a section for project 3
+- We have to check in with other group members working on the same project to bounce off ideas off of each other. 
+- We are still developing and brainstorming the design elements 
 ### Check-in 3
 - 
 - 
