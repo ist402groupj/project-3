@@ -40,9 +40,15 @@
   </ul>
   <div class="wrapper">
     <trading-card need="joy">Some inner text that will render out</trading-card>
-    <word-count>
-      <trading-card need="nothing"><div>You feel much shame.</div></trading-card>
-    </word-count>
+
+    <trading-card need="nothing">
+      <div>You feel much shame.</div>
+    </trading-card>
+
+    <trading-card need="invert">
+      <div>You feel much shame, but in blue.</div>
+    </trading-card>
+
   </div>
   <script type="module">
     import "./trading-card.js";

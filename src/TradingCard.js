@@ -62,6 +62,10 @@ export class TradingCard extends LitElement {
         color: yellow;
         background-color: black;
       }
+      :host([need='invert']) {
+        color: blue;
+        background-color: lightgray;
+      }
     `;
   }
 
@@ -69,12 +73,12 @@ export class TradingCard extends LitElement {
   render() {
     return html`
       <h1>Make me awesome</h1>
-      <p>Build the future we ${this.need}.</p>
+      <p>Color scheme for ${this.need}.</p>
       <slot></slot>
 
       <h2>Trading card</h2>
       <div>some outline element</div>
-      <p>Card info here</p>
+      <p>description info here in a slot</p>
       <slot></slot>
     `;
   }
