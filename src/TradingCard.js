@@ -58,6 +58,9 @@ export class TradingCard extends LitElement {
       :host {
         display: block;
       }
+      .cardBorder {
+        border: 1px solid black;
+      }
       :host([need='joy']) {
         color: yellow;
         background-color: black;
@@ -72,6 +75,7 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
+      <div class="cardBorder"></div>
       <h1>Make me awesome</h1>
       <p>Color scheme for ${this.need}.</p>
       <slot></slot>
