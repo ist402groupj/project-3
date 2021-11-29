@@ -53,10 +53,11 @@ These are dedicated status check-ins as this is a multi-week project
 - We have to check in with other group members working on the same project to bounce off ideas off of each other. 
 - We are still developing and brainstorming the design elements 
 ### Check-in 3
-- continuing group meet ups to further review and change parts of project 
-- ideas for the cards (4x); professor ollendyke, nittany lion, seasoned, halloween characters, holiday characters, etc.
-- continuing to check in with other groups to compare progress
-- 
+- Continuing group meet ups to further review and change parts of project 
+- Ideas for the cards (4x); professor ollendyke, nittany lion, seasoned, halloween characters, holiday characters, etc.
+- Continuing to check in with other groups to compare progress
+- We are progressing on the styling and layout of the html that renders
+- Working on addressing the current [issues](https://github.com/ist402groupj/project-3/issues/3)
 ### Check-in 4
 - 
 - 
