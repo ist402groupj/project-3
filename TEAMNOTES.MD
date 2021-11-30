@@ -59,5 +59,30 @@ These are dedicated status check-ins as this is a multi-week project
 - We are progressing on the styling and layout of the html that renders
 - Working on addressing the current [issues](https://github.com/ist402groupj/project-3/issues/3)
 ### Check-in 4
-- 
-- 
+- Plan for completing our project: [Trading Card](https://github.com/elmsln/issues/issues/880)
+
+- Specific requirement for trading card:
+- Creating 1 fully documented variation per team member (3 teammates == 3 trading cards implemented in the demo)
+- haxProperties wiring with working boilerplate demo
+- variables for images and any textual aspects which are variable
+- color input for border / primary color needed
+- this design can be made inaccessible; so simple-colors is needed in order to ensure that color contrast ratios can be maintained between text color and the background color that renders the spaces
+- Each line should also optionally support an icon from the simple-icons library
+- slots should be available for custom implementation
+- Demo must include an implementation of rendering cards by running through a map function in order to stamp data from an array into the cards.
+- scaled down proportionally for mobile (their version appears to just scale as you drag in, possibly using css scale or SVG capabilities)
+- Bonus: Add support for flipping the card over / having a "back" to the card +2 (this would have support for an icon / text / image that is the "back" of the card and then a state change for which side the card is to display)
+
+- Project Three Rubric Requirements:
+### General Requirements:
+- Final result matches the composite / issue selected, is polished, wired to HAX, and - 4%
+- Issue specific requirements are satisfied in the design and implementation of the element - 10%
+- A meaningful automated test for the element you produce - 1%
+- A story that allows for leveraging properties - 1%
+- Teamnotes maintained with status updates, on github, published to npm in the end - 4%
+
+### Bonus Opportunities:
+- If your element can benefit from i18n - implement internationalization support in your demo. This means setting the language to one other than english (page level) and then translate your element's textual areas to another language. +1% per language you add, up to 3 languages (though you'll need to add more demo pages to illustrate this or create a select box that changes the page's language)
+- Add lazyloading support for all assets and the element itself +1% More to be announced as we move forward
+
+
