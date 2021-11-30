@@ -75,15 +75,15 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="cardBorder"></div>
-      <h1>Make me awesome</h1>
-      <p>Color scheme for ${this.need}.</p>
-      <slot></slot>
-
-      <h2>Trading card</h2>
-      <div>some outline element</div>
-      <p>description info here in a slot</p>
-      <slot></slot>
+      <div class="cardBorder">
+        <h1>Make me awesome</h1>
+        <p>Color scheme for ${this.need}.</p>
+        <slot></slot>
+        <h2>Trading card</h2>
+        <div>some outline element</div>
+        <p>description info here in a slot</p>
+        <slot></slot>
+      </div>
     `;
   }
 
