@@ -14,18 +14,22 @@
       padding: 50px;
       font-family: sans-serif;
     }
+
     .wrapper {
       margin: 100px;
     }
+
     .menu {
       display: flex;
       justify-content: space-evenly;
     }
+
     .menu li {
       display: inline-flex;
       font-weight: bold;
       padding: 40px;
     }
+
     .joyful {
       font-size: 2em;
     }
@@ -39,16 +43,16 @@
     <li><a href="/hax.html">HAX, card demo</a></li>
   </ul>
   <div class="wrapper">
-    <trading-card need="joy">Some inner text that will render out</trading-card>
-
-    <trading-card need="nothing">
-      <div>You feel much shame.</div>
+    <trading-card need="joy">Some inner text that will render out
     </trading-card>
-
+    <div style="padding:5px;"></div>
     <trading-card need="invert">
       <div>You feel much shame, but in blue.</div>
     </trading-card>
-
+    <div style="padding:5px;"></div>
+    <trading-card need="nothing">
+      <div>You feel much shame.</div>
+    </trading-card>
   </div>
   <script type="module">
     import "./trading-card.js";
