@@ -61,11 +61,25 @@ These are dedicated status check-ins as this is a multi-week project
 ### Check-in 4
 - Plan for completing our project: [Trading Card](https://github.com/elmsln/issues/issues/880)
 
+  Our team has had a late start to this project so in this final stretch we are going to make full use of our time. We plan to meet once or twice this next week to delegate tasks and make a list of what project requirements are left to fulfill. What helped our group was sharing the code over a big screen and walking through it together. We have a working idea of what we want to do for the variations such as holidays but we need to decide if we want to just do the holidays themselves or create holiday characters such as satan, easter bunny, etc.
+
 - Specific requirement for trading card:
-- Creating 1 fully documented variation per team member (3 teammates == 3 trading cards implemented in the demo)
+- Creating 1 fully documented variation per team member 
+  --> 4 members 4 variations.  Idea: Holidays
+  1) Halloween
+  2) Thanksgiving
+  3) Christmas
+  4) New Years
 - haxProperties wiring with working boilerplate demo
 - variables for images and any textual aspects which are variable
+  -->  images of holiday characters, personality trait rankings
+  ---> images of seasons, rankings of feelings associated with each season or activities in each season...
 - color input for border / primary color needed
+  -->  color schemes based on holidays
+    1) Halloween: Orange and Purple
+    2) Thanksgiving: Brown and Yellow
+    3) Christmas: Red and Green
+    4) New Years: Blue and White
 - this design can be made inaccessible; so simple-colors is needed in order to ensure that color contrast ratios can be maintained between text color and the background color that renders the spaces
 - Each line should also optionally support an icon from the simple-icons library
 - slots should be available for custom implementation
@@ -78,8 +92,15 @@ These are dedicated status check-ins as this is a multi-week project
 - Final result matches the composite / issue selected, is polished, wired to HAX, and - 4%
 - Issue specific requirements are satisfied in the design and implementation of the element - 10%
 - A meaningful automated test for the element you produce - 1%
+    - our team has completed tests last minute, so in this last final stretch, we will test each element as we go instead of trying to test it all in the end.
 - A story that allows for leveraging properties - 1%
-- Teamnotes maintained with status updates, on github, published to npm in the end - 4%
+    - We have had issues with storybook in the past so our plan is to troubleshoot as a team at first to figure out where we went wrong in the past. Next, we will further review with other groups doing trading cards to see how they found success in loading their project to storybook. Finally, we wil reach out to the prof or TAs to see what best course of action to take.
+- Teamnotes maintained with status updates, on github, published to npm in the end - 4% --> (Delaney)
+  1) Milestone #1 : Complete
+  2) Milestone #2: Complete
+  3) Milestone #3: Complete
+  4) Milestone #4: Almost complete
+  5) Publish to NPM: TBD
 
 ### Bonus Opportunities:
 - If your element can benefit from i18n - implement internationalization support in your demo. This means setting the language to one other than english (page level) and then translate your element's textual areas to another language. +1% per language you add, up to 3 languages (though you'll need to add more demo pages to illustrate this or create a select box that changes the page's language)
