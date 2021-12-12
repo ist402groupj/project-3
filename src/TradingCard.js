@@ -13,12 +13,18 @@ export class TradingCard extends LitElement {
   constructor() {
     super();
     this.need = 'all need to succeed';
+
+    setTimeout(() => {
+      import('./Name.js');
+      import('./Image.js');
+      import('./Traits.js');
+    }, 0);
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
-      need: { type: String, reflect: true },
+      TradingCard: { type: String, reflect: true },
     };
   }
 
@@ -57,17 +63,11 @@ export class TradingCard extends LitElement {
     return css`
       :host {
         display: block;
-      }
-      .cardBorder {
-        padding: 20px;
-      }
-      :host([need='joy']) {
-        color: yellow;
-        background-color: black;
-      }
-      :host([need='invert']) {
-        color: blue;
-        background-color: lightgray;
+        background-color: #ff0000;
+        width: 300px;
+        border: 50px, dark green;
+        padding: 5px;
+        margin: 200px;
       }
     `;
   }
@@ -75,22 +75,24 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="cardBorder">
-        <h1>Make me awesome</h1>
-        <p>Color scheme for ${this.need}.</p>
-        <slot></slot>
-        <h2>Trading card</h2>
-        <p>description info here in a slot</p>
-        <slot></slot>
+      <div class="image">
+        <card-image></card-image>
+      </div>
+
+      <div class="name">
+        <card-name></card-name>
+      </div>
+
+      <div class="traits">
+        <card-traits></card-traits>
+        <card-traits></card-traits>
+        <card-traits></card-traits>
       </div>
     `;
   }
 
-  // HAX specific callback
-  // This teaches HAX how to edit and work with your web component
-  /**
-   * haxProperties integration via file reference
-   */
+  /* haxProperties integration via file reference */
+
   static get haxProperties() {
     return new URL(`../lib/trading-card.haxProperties.json`, import.meta.url)
       .href;
