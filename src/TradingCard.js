@@ -16,7 +16,7 @@ export class TradingCard extends LitElement {
 
     setTimeout(() => {
       import('./Name.js');
-      import('./Image.js');
+      import('./CardImage.js');
       import('./Traits.js');
     }, 0);
   }

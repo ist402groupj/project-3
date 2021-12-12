@@ -1,12 +1,39 @@
 import { html, css } from 'lit';
 import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
-export class Image extends SimpleColors {
+export class CardImage extends SimpleColors {
   constructor() {
-    super();
-    this.accentColor = 'black';
-    this.image = new URL('../assets/Elf.jpg', import.meta.url).href;
-    this.alt = 'Buddy the Elf';
+    this.cardImage = [
+      {
+        name: 'Buddy the Elf',
+        image: './assets/Elf.jpg',
+        age: '30',
+        height: '6ft 3',
+        holidayCheer: '99.9',
+
+      },
+      {
+        name: 'Mrs. Claus',
+        image: './assets/MClaus.jpg',
+        age: '228',
+        height: '5ft 5',
+        holidayCheer: '90',
+      },
+      {
+        name: 'The Grinch',
+        image: './assets/Grinch.jpg',
+        age: '53',
+        height: '6ft 2',
+        holidayCheer: '10',
+      },
+      {
+        name: 'Santa',
+        image: './assets/Santa.jpg',
+        age: '1751',
+        height: '6ft',
+        holidayCheer: '100',
+      },
+    ];
   }
 
   static get tag() {
