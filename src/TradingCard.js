@@ -1,5 +1,7 @@
 // dependencies / things imported
 import { LitElement, html, css } from 'lit';
+import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 // EXPORT (so make available to other documents that reference this file) a class, that extends LitElement
 // which has the magic life-cycles and developer experience below added
@@ -19,6 +21,39 @@ export class TradingCard extends LitElement {
       import('./CardImage.js');
       import('./Traits.js');
     }, 0);
+
+    this.cardImage = [
+      {
+        name: 'Buddy the Elf',
+        image: './assets/Elf.jpg',
+        age: '30',
+        height: '6ft 3',
+        holidayCheer: '99.9',
+
+      },
+      {
+        name: 'Mrs. Claus',
+        image: './assets/MClaus.jpg',
+        age: '228',
+        height: '5ft 5',
+        holidayCheer: '90',
+      },
+      {
+        name: 'The Grinch',
+        image: './assets/Grinch.jpg',
+        age: '53',
+        height: '6ft 2',
+        holidayCheer: '10',
+      },
+      {
+        name: 'Santa',
+        image: './assets/Santa.jpg',
+        age: '1751',
+        height: '6ft',
+        holidayCheer: '100',
+      },
+    ];
+
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
@@ -63,11 +98,40 @@ export class TradingCard extends LitElement {
     return css`
       :host {
         display: block;
-        background-color: #ff0000;
-        width: 300px;
+        background-color: white;
+        width: 350px;
         border: 50px, dark green;
         padding: 5px;
         margin: 200px;
+      }
+      .cardBorder {
+        border: 15px solid #336600;
+        margin: 10px;
+        width: auto;
+      }
+      .cardOutline {
+        border: 10px solid red;
+        margin: auto;
+      }
+      .imageWrap {
+        width: auto; 
+      }
+      .listWrap {
+        background-color: white;
+        border-radius: 5px;
+        margin: 15px;
+        text-align: left;
+        width: 180px;
+      }
+      ul {
+        text-align: center;
+      }
+      img {
+        border-radius: 10px;
+        max-width: 100%;
+        max-height: auto;
+        width: 200px;
+        height: 200px;
       }
     `;
   }
@@ -75,20 +139,23 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="image">
-        <card-image></card-image>
-      </div>
-
-      <div class="name">
-        <card-name></card-name>
-      </div>
-
-      <div class="traits">
-        <card-traits></card-traits>
-        <card-traits></card-traits>
-        <card-traits></card-traits>
-      </div>
-    `;
+    <ul>
+        ${this.cardImage.map(
+      item =>
+        html`
+              <div class="cardBorder">
+              <div class="cardOutline">
+               <h1>${item.name}</h1>
+                <div class="imageWrap"><img src=${item.image} alt=""/></div>
+                <div class="listWrap">
+                <div><simple-icon-lite icon="star-border"></simple-icon-lite> Age: ${item.age}</div>
+                <div><simple-icon-lite icon="social:person-outline"></simple-icon-lite>Height: ${item.height}</div>
+                <div><simple-icon-lite icon="places:ac-unit"></simple-icon-lite>Holiday Cheer: ${item.holidayCheer}</div>  
+              </div></div></div>
+            `)}
+      </ul>
+      <slot></slot>
+    `
   }
 
   /* haxProperties integration via file reference */
