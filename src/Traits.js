@@ -5,9 +5,9 @@ import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 export class Traits extends SimpleColors {
   constructor() {
     super();
-    this.accentColor = 'black';
+   /* this.accentColor = 'black';
     this.trait = 'Amazing';
-    this.stat = '10';
+    this.stat = '10';*/
   }
 
   static get tag() {

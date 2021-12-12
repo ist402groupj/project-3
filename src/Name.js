@@ -5,8 +5,6 @@ import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 export class Name extends SimpleColors {
   constructor() {
     super();
-    this.accentColor = 'purple';
-    this.name = 'Buddy the Elf';
   }
 
   static get tag() {
@@ -34,9 +32,9 @@ export class Name extends SimpleColors {
         }
         p {
           text-transform: uppercase;
-          text-align: left;
+          text-align: center;
           font-weight: bolder;
-          color: var(--simple-colors-default-theme-accent-8);
+          color: var(--simple-colors-default-theme-accent-1);
           margin: 9px;
           font-size: 14px;
         }
