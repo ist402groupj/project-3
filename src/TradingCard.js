@@ -12,36 +12,13 @@ export class TradingCard extends LitElement {
   // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
-    this.TradingCard = [
-      {
-        name: 'Santa',
-        image: './assets/Santa.jpg',
-        Happy: '110%',
-        Plump: '80%',
-        Giving: '1000%',
-      },
-      {
-        name: 'Buddy the Elf',
-        image: './assets/Elf.jpg',
-        Goofy: '100%',
-        Caftiness: '95%',
-        Creativity: '3000%',
-      },
-      {
-        name: 'Grinch',
-        image: './assets/Grinch.jpg',
-        Personality: '0%',
-        Attitude: '93%',
-        Greediness: '110%',
-      },
-      {
-        name: 'Mrs. Claus',
-        image: './assets/MClaus.jpg',
-        Baking: '95%',
-        Hospitality: '100%',
-        Giving: '1000%',
-      },
-    ];
+    this.need = 'all need to succeed';
+
+    setTimeout(() => {
+      import('./Name.js');
+      import('./Image.js');
+      import('./Traits.js');
+    }, 0);
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
@@ -86,17 +63,11 @@ export class TradingCard extends LitElement {
     return css`
       :host {
         display: block;
-      }
-      .cardBorder {
-        padding: 20px;
-      }
-      :host(.TradingCard='joy']) {
-        color: yellow;
-        background-color: black;
-      }
-      :host(.TradingCard='invert']) {
-        color: blue;
-        background-color: lightgray;
+        background-color: #ff0000;
+        width: 300px;
+        border: 50px, dark green;
+        padding: 5px;
+        margin: 200px;
       }
     `;
   }
@@ -104,22 +75,24 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="cardBorder">
-        <h1>Make me awesome</h1>
-        <p>Color scheme for ${this.TradingCard}.</p>
-        <slot></slot>
-        <h2>Trading card</h2>
-        <p>description info here in a slot</p>
-        <slot></slot>
+      <div class="image">
+        <card-image></card-image>
+      </div>
+
+      <div class="name">
+        <card-name></card-name>
+      </div>
+
+      <div class="traits">
+        <card-traits></card-traits>
+        <card-traits></card-traits>
+        <card-traits></card-traits>
       </div>
     `;
   }
 
-  // HAX specific callback
-  // This teaches HAX how to edit and work with your web component
-  /**
-   * haxProperties integration via file reference
-   */
+  /* haxProperties integration via file reference */
+
   static get haxProperties() {
     return new URL(`../lib/trading-card.haxProperties.json`, import.meta.url)
       .href;

@@ -4,7 +4,7 @@ import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 export class Image extends SimpleColors {
   constructor() {
     super();
-    this.accentColor = 'purple';
+    this.accentColor = 'black';
     this.image = new URL('../assets/Elf.jpg', import.meta.url).href;
     this.alt = 'Buddy the Elf';
   }
@@ -26,7 +26,7 @@ export class Image extends SimpleColors {
       ...super.styles,
       css`
         :host {
-          --img-width: 310px;
+          --img-width: 200px;
           justify-content: center;
           align-items: center;
           display: flex;

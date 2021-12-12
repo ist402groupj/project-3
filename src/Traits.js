@@ -2,23 +2,23 @@
 import { html, css } from 'lit';
 import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
-export class StatInfo extends SimpleColors {
+export class Traits extends SimpleColors {
   constructor() {
     super();
     this.accentColor = 'black';
-    this.trait = 'Revolutionary';
-    this.stat = '95';
+    this.trait = 'Amazing';
+    this.stat = '10';
   }
 
   static get tag() {
-    return 'tc-statinfo';
+    return 'card-traits';
   }
 
   static get properties() {
     return {
       ...super.properties,
       trait: { type: String },
-      stat: {type: String}
+      stat: { type: String },
     };
   }
 
@@ -29,34 +29,35 @@ export class StatInfo extends SimpleColors {
         :host {
           font-family: 'Bebas Neue', sans-serif;
         }
-        /* div {
+        div {
           border: 1px dashed black;
+          background: white;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-        } */
+        }
         .word {
-          /* text-transform: uppercase; */
+          text-transform: uppercase;
           text-align: left;
-          /* color: var(--simple-colors-default-theme-accent-6); */
+          color: var(--simple-colors-default-theme-accent-7);
           margin: 0px;
-          font-size: 14px;
+          font-size: 12px;
         }
-        .num{
-          /* text-transform: uppercase; */
+        .num {
+          text-transform: uppercase;
           text-align: right;
-          /* color: var(--simple-colors-default-theme-accent-6); */
+          color: var(--simple-colors-default-theme-accent-7);
           margin: 0px;
-          font-size: 14px;
+          font-size: 12px;
         }
-        
-        .container{
-            display: grid;
-            height: 4vh;
-            border: 3px black;
-            grid-template-columns: 10fr 10fr;
-            border-bottom: 3px;
+
+        .container {
+          display: grid;
+          height: 4vh;
+          border: 3px black;
+          grid-template-columns: 10fr 10fr;
+          border-bottom: 3px;
         }
       `,
     ];
@@ -64,15 +65,16 @@ export class StatInfo extends SimpleColors {
 
   render() {
     return html`
-    <div class="container">
-      <div>
-        <p class="word">${this.trait}</p>
+      <div class="container">
+        <div>
+          <p class="word">${this.trait}</p>
+        </div>
+        <div>
+          <p class="num">${this.stat}</p>
+          <p></p>
+        </div>
       </div>
-      <div>
-      <p class="num">${this.stat}<p>
-     </div>
-    </div> 
     `;
   }
 }
-customElements.define(StatInfo.tag, StatInfo);
+customElements.define(Traits.tag, Traits);
