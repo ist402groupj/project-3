@@ -30,8 +30,8 @@ export class Traits extends SimpleColors {
           font-family: 'Bebas Neue', sans-serif;
         }
         div {
-          border: 1px dashed black;
-          background: white;
+          border: 1px solid black;
+          background: green;
           display: flex;
           flex-direction: column;
           justify-content: center;
