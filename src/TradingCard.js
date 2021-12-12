@@ -12,13 +12,42 @@ export class TradingCard extends LitElement {
   // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
-    this.need = 'all need to succeed';
+    this.TradingCard = [
+      {
+        name: 'Santa',
+        image: './assets/Santa.jpg',
+        Happy: '110%',
+        Plump: '80%',
+        Giving: '1000%',
+      },
+      {
+        name: 'Buddy the Elf',
+        image: './assets/Elf.jpg',
+        Goofy: '100%',
+        Caftiness: '95%',
+        Creativity: '3000%',
+      },
+      {
+        name: 'Grinch',
+        image: './assets/Grinch.jpg',
+        Personality: '0%',
+        Attitude: '93%',
+        Greediness: '110%',
+      },
+      {
+        name: 'Mrs. Claus',
+        image: './assets/MClaus.jpg',
+        Baking: '95%',
+        Hospitality: '100%',
+        Giving: '1000%',
+      },
+    ];
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
-      need: { type: String, reflect: true },
+      TradingCard: { type: String, reflect: true },
     };
   }
 
@@ -61,11 +90,11 @@ export class TradingCard extends LitElement {
       .cardBorder {
         padding: 20px;
       }
-      :host([need='joy']) {
+      :host(.TradingCard='joy']) {
         color: yellow;
         background-color: black;
       }
-      :host([need='invert']) {
+      :host(.TradingCard='invert']) {
         color: blue;
         background-color: lightgray;
       }
@@ -77,7 +106,7 @@ export class TradingCard extends LitElement {
     return html`
       <div class="cardBorder">
         <h1>Make me awesome</h1>
-        <p>Color scheme for ${this.need}.</p>
+        <p>Color scheme for ${this.TradingCard}.</p>
         <slot></slot>
         <h2>Trading card</h2>
         <p>description info here in a slot</p>
