@@ -2,15 +2,15 @@
 import { html, css } from 'lit';
 import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
-export class Header extends SimpleColors {
+export class Name extends SimpleColors {
   constructor() {
     super();
-    this.accentColor = 'black';
-    this.name = 'john doe';
+    this.accentColor = 'purple';
+    this.name = 'Buddy the Elf';
   }
 
   static get tag() {
-    return 'tc-header';
+    return 'card-name';
   }
 
   static get properties() {
@@ -52,4 +52,4 @@ export class Header extends SimpleColors {
     `;
   }
 }
-customElements.define(Header.tag, Header);
+customElements.define(Name.tag, Name);

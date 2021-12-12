@@ -1,19 +1,16 @@
 import { html, css } from 'lit';
 import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
-export class Photo extends SimpleColors {
+export class Image extends SimpleColors {
   constructor() {
     super();
-    this.accentColor = 'grey';
-    this.image = new URL(
-      '../assets/WinkingRedPanda.jpg',
-      import.meta.url
-    ).href;
-    this.alt = 'Red Panda Winking';
+    this.accentColor = 'purple';
+    this.image = new URL('../assets/Elf.jpg', import.meta.url).href;
+    this.alt = 'Buddy the Elf';
   }
 
   static get tag() {
-    return 'tc-photo';
+    return 'card-image';
   }
 
   static get properties() {
@@ -51,4 +48,4 @@ export class Photo extends SimpleColors {
     `;
   }
 }
-customElements.define(Photo.tag, Photo);
+customElements.define(Image.tag, Image);
