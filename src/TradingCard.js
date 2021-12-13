@@ -1,7 +1,7 @@
 // dependencies / things imported
 import { LitElement, html, css } from 'lit';
-import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
-import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
+import '@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 // EXPORT (so make available to other documents that reference this file) a class, that extends LitElement
 // which has the magic life-cycles and developer experience below added
@@ -18,7 +18,6 @@ export class TradingCard extends LitElement {
 
     setTimeout(() => {
       import('./Name.js');
-      import('./CardImage.js');
       import('./Traits.js');
     }, 0);
 
@@ -28,38 +27,16 @@ export class TradingCard extends LitElement {
         image: './assets/Elf.jpg',
         age: '30',
         height: '6ft 3',
-        holidayCheer: '99.9',
-
-      },
-      {
-        name: 'Mrs. Claus',
-        image: './assets/MClaus.jpg',
-        age: '228',
-        height: '5ft 5',
-        holidayCheer: '90',
-      },
-      {
-        name: 'The Grinch',
-        image: './assets/Grinch.jpg',
-        age: '53',
-        height: '6ft 2',
-        holidayCheer: '10',
-      },
-      {
-        name: 'Santa',
-        image: './assets/Santa.jpg',
-        age: '1751',
-        height: '6ft',
-        holidayCheer: '100',
+        holidayCheer: '99',
       },
     ];
-
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
-      TradingCard: { type: String, reflect: true },
+      need: { type: String, reflect: true },
+      cardImage: { type: Array },
     };
   }
 
@@ -67,8 +44,49 @@ export class TradingCard extends LitElement {
   // this allows you to react to variables changing and use javascript to perform logic
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
-      if (propName === 'need' && this[propName] === 'joy') {
-        this.classList.add('joyful');
+      if (propName === 'need' && this[propName] === 'buddy') {
+        this.cardImage = [
+          {
+            name: 'Buddy the Elf',
+            image: './assets/Elf.jpg',
+            age: '30',
+            height: '6ft 3',
+            holidayCheer: '99',
+          },
+        ];
+      }
+      if (propName === 'need' && this[propName] === 'mrsClaus') {
+        this.cardImage = [
+          {
+            name: 'Mrs. Claus',
+            image: './assets/MClaus.jpg',
+            age: '228',
+            height: '5ft 5',
+            holidayCheer: '90',
+          },
+        ];
+      }
+      if (propName === 'need' && this[propName] === 'santa') {
+        this.cardImage = [
+          {
+            name: 'Santa',
+            image: './assets/Santa.jpg',
+            age: '1751',
+            height: '6ft',
+            holidayCheer: '100',
+          },
+        ];
+      }
+      if (propName === 'need' && this[propName] === 'grinch') {
+        this.cardImage = [
+          {
+            name: 'The Grinch',
+            image: './assets/Grinch.jpg',
+            age: '53',
+            height: '6ft 2',
+            holidayCheer: '10',
+          },
+        ];
       }
     });
   }
@@ -101,8 +119,6 @@ export class TradingCard extends LitElement {
         background-color: white;
         width: 350px;
         border: 50px, dark green;
-        padding: 5px;
-        margin: 200px;
       }
       .cardBorder {
         border: 15px solid #336600;
@@ -112,16 +128,6 @@ export class TradingCard extends LitElement {
       .cardOutline {
         border: 10px solid red;
         margin: auto;
-      }
-      .imageWrap {
-        width: auto; 
-      }
-      .listWrap {
-        background-color: white;
-        border-radius: 5px;
-        margin: 15px;
-        text-align: left;
-        width: 180px;
       }
       ul {
         text-align: center;
@@ -139,23 +145,34 @@ export class TradingCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-    <ul>
+      <ul>
         ${this.cardImage.map(
-      item =>
-        html`
+          item =>
+            html`
               <div class="cardBorder">
-              <div class="cardOutline">
-               <h1>${item.name}</h1>
-                <div class="imageWrap"><img src=${item.image} alt=""/></div>
-                <div class="listWrap">
-                <div><simple-icon-lite icon="star-border"></simple-icon-lite> Age: ${item.age}</div>
-                <div><simple-icon-lite icon="social:person-outline"></simple-icon-lite>Height: ${item.height}</div>
-                <div><simple-icon-lite icon="places:ac-unit"></simple-icon-lite>Holiday Cheer: ${item.holidayCheer}</div>  
-              </div></div></div>
-            `)}
+                <div class="cardOutline">
+                  <h1>${item.name}</h1>
+                  <img src=${item.image} alt="" />
+                  <div>
+                    <simple-icon-lite icon="star-border"></simple-icon-lite>
+                    Age: ${item.age}
+                  </div>
+                  <div>
+                    <simple-icon-lite
+                      icon="social:person-outline"
+                    ></simple-icon-lite
+                    >Height: ${item.height}
+                  </div>
+                  <div>
+                    <simple-icon-lite icon="places:ac-unit"></simple-icon-lite
+                    >Holiday Cheer: ${item.holidayCheer}
+                  </div>
+                </div>
+              </div>
+            `
+        )}
       </ul>
-      <slot></slot>
-    `
+    `;
   }
 
   /* haxProperties integration via file reference */
