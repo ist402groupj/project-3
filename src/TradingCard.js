@@ -115,22 +115,33 @@ export class TradingCard extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: flex;
+        align-items: center;
         background-color: white;
-        width: 350px;
-        border: 50px, dark green;
-      }
-      .cardBorder {
-        border: 15px solid #336600;
+        justify-content: left;
+        height: 410px;
+        width: 280px;
         margin: 10px;
-        width: auto;
       }
-      .cardOutline {
-        border: 10px solid red;
-        margin: auto;
+      :host([need='buddy']) {
+        color: white;
+        background-color: green;
+        border: solid 1px black;
       }
-      ul {
-        text-align: center;
+      :host([need='mrsClaus']) {
+        color: black;
+        background-color: white;
+        border: dashed 3px red;
+      }
+      :host([need='santa']) {
+        color: black;
+        background-color: white;
+        border: solid 1px black;
+      }
+      :host([need='grinch']) {
+        color: white;
+        background-color: #336600;
+        border: solid 1px black;
       }
       img {
         border-radius: 10px;
@@ -139,39 +150,38 @@ export class TradingCard extends LitElement {
         width: 200px;
         height: 200px;
       }
+      ul {
+        margin: 1px;
+      }
     `;
   }
 
   // HTML - specific to Lit
   render() {
     return html`
-      <ul>
-        ${this.cardImage.map(
-          item =>
-            html`
-              <div class="cardBorder">
-                <div class="cardOutline">
-                  <h1>${item.name}</h1>
-                  <img src=${item.image} alt="" />
-                  <div>
-                    <simple-icon-lite icon="star-border"></simple-icon-lite>
-                    Age: ${item.age}
-                  </div>
-                  <div>
-                    <simple-icon-lite
-                      icon="social:person-outline"
-                    ></simple-icon-lite
-                    >Height: ${item.height}
-                  </div>
-                  <div>
-                    <simple-icon-lite icon="places:ac-unit"></simple-icon-lite
-                    >Holiday Cheer: ${item.holidayCheer}
-                  </div>
-                </div>
+      ${this.cardImage.map(
+        item =>
+          html`
+            <ul>
+              <h1 style="text-align:center">${item.name}</h1>
+              <img src=${item.image} alt="" />
+              <div>
+                <simple-icon-lite icon="star-border"></simple-icon-lite>
+                Age: ${item.age}
               </div>
-            `
-        )}
-      </ul>
+              <div>
+                <simple-icon-lite
+                  icon="social:person-outline"
+                ></simple-icon-lite>
+                Height: ${item.height}
+              </div>
+              <div>
+                <simple-icon-lite icon="places:ac-unit"></simple-icon-lite>
+                Holiday Cheer: ${item.holidayCheer}
+              </div>
+            </ul>
+          `
+      )}
     `;
   }
 
