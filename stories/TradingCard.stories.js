@@ -1,8 +1,8 @@
 import { html } from 'lit';
+import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
 import './TradingCard.js';
-import './Name.js';
-import './Traits.js';
+
 
 export default {
   title: 'Project Three',
@@ -40,4 +40,15 @@ function Template({name, image,age, height,holidayCheer}) {
   )}
 `;
 }
+
 export const TradingCard = TradingCardTemplate.bind({});
+this.cardImage = [
+  {
+    name: 'Buddy the Elf',
+    image: './assets/Elf.jpg',
+    age: '30',
+    height: '6ft 3',
+    holidayCheer: '99',
+  },
+];
+export const Card = Template.bind({});
