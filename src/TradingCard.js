@@ -136,11 +136,11 @@ export class TradingCard extends LitElement {
       :host([need='santa']) {
         color: black;
         background-color: white;
-        border: solid 1px black;
+        border: dashed 3px green;
       }
       :host([need='grinch']) {
         color: white;
-        background-color: #336600;
+        background-color: red;
         border: solid 1px black;
       }
       img {
