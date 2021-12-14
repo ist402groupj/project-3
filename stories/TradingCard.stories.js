@@ -36,7 +36,7 @@ export const Card = Template.bind({});
 export const TradingCard = Template.bind({});
 TradingCard.args = {
   need: 'Trading Card',
-  slot: html`<trading-card></trading-card>
+  slot: html`<trading-card></trading-card>  
   `,
   /*name: "Buddy The Elf",
   image:"./assets/Elf.jpg",
