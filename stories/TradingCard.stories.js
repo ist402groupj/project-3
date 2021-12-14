@@ -1,18 +1,19 @@
 import { html } from 'lit';
-import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
 
-import './TradingCard.js';
+import '../src/TradingCard.js';
 
 
 export default {
-  title: 'Trading Card',
+  title: 'TradingCard',
   component: 'trading-card',
   argTypes: {
-    need: { control: 'text' }, //I dont understand what "need" is for
+    need: { control: 'text' }, // attribute to define different card variations
   },
 };
+
+// todo: define and use slot
 function Template({ need = 'rename', slot }) {
-  return html` <trading-card need="${need}"> ${slot} </trading-card `;
+  return html` <trading-card need="${need}"></trading-card `;
 }
 
 export const Card = Template.bind({});
