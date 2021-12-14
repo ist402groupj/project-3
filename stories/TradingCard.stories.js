@@ -7,19 +7,40 @@ export default {
   title: 'TradingCard',
   component: 'trading-card',
   argTypes: {
-    need: { control: 'text' }, // attribute to define different card variations
+    need: {control: 'text'},
+    name: {control: 'text'},
+    image:{control: 'text'},
+    age: {control: 'text'},
+    height:{control: 'text'},
+    holidayCheer: {control: 'text'} 
   },
 };
 
 // todo: define and use slot
-function Template({ need = 'rename', slot }) {
-  return html` <trading-card need="${need}"></trading-card `;
+function Template({need, name, image, age, height, holidayCheer }) {
+  return html` <trading-card
+  need = "${need}"
+   name="${name}"
+   image="${image}"
+   age="${age}"
+   height="${height}"
+   holidayCheer="${holidayCheer}"
+   ></trading-card `;
 }
 
 export const Card = Template.bind({});
+  Card.args = {
+    need: 'Card',
+  }
 
 export const TradingCard = Template.bind({});
 TradingCard.args = {
-  need: 'science',
-  slot: html`<p>slotted content that should render</p>`, //where do I find this slotted content? index.html or TradingCard.js?
+  need: 'Trading Card',
+  slot: html`<trading-card></trading-card>  
+  `,
+  /*name: "Buddy The Elf",
+  image:"./assets/Elf.jpg",
+  age: "30",
+  height:" 6ft 3",
+  holidayCheer: "99"*/
 };
