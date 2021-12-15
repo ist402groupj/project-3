@@ -120,19 +120,18 @@ export class TradingCard extends LitElement {
         justify-content: left;
         height: 410px;
         width: 300px;
-        margin: 10px;
+        margin: 15px;
       }
       :host([need='buddy']) {
         color: white;
         background-color: red;
         border: solid 10px black;
         border-radius: 15px;
-
       }
       :host([need='mrsClaus']) {
         color: white;
         background-color: red;
-        border:solid 10px black;
+        border: solid 10px black;
         border-radius: 15px;
       }
       :host([need='santa']) {
@@ -165,22 +164,20 @@ export class TradingCard extends LitElement {
       ${this.cardImage.map(
         item =>
           html`
-              <h1 style="text-align:center">${item.name}</h1>
-              <img src=${item.image} alt="" />
-              <div>
-                <simple-icon-lite icon="star-border"></simple-icon-lite>
-                Age: ${item.age}
-              </div>
-              <div>
-                <simple-icon-lite
-                  icon="social:person-outline"
-                ></simple-icon-lite>
-                Height: ${item.height}
-              </div>
-              <div>
-                <simple-icon-lite icon="places:ac-unit"></simple-icon-lite>
-                Holiday Cheer: ${item.holidayCheer}
-              </div>
+            <h1 style="text-align:center">${item.name}</h1>
+            <img src=${item.image} alt="" />
+            <div>
+              <simple-icon-lite icon="star-border"></simple-icon-lite>
+              Age: ${item.age}
+            </div>
+            <div>
+              <simple-icon-lite icon="social:person-outline"></simple-icon-lite>
+              Height: ${item.height}
+            </div>
+            <div>
+              <simple-icon-lite icon="places:ac-unit"></simple-icon-lite>
+              Holiday Cheer: ${item.holidayCheer}
+            </div>
           `
       )}
     `;
