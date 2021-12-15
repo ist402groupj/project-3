@@ -24,6 +24,10 @@ export class Name extends SimpleColors {
       css`
         :host {
           font-family: 'Bebas Neue', sans-serif;
+          display: block;
+          padding: 5px;
+          text-allign: center;
+
         }
         div {
           border: 3px black;
@@ -32,7 +36,7 @@ export class Name extends SimpleColors {
         }
         p {
           text-transform: uppercase;
-          text-align: center;
+          text-align:left;
           font-weight: bolder;
           color: var(--simple-colors-default-theme-accent-1);
           margin: 9px;

@@ -17,7 +17,7 @@ export default {
 };
 
 // todo: define and use slot
-function Template({need, name, image, age, height, holidayCheer }) {
+function CardTemplate({need, name, image, age, height, holidayCheer }) {
   return html` <trading-card
   need = "${need}"
    name="${name}"
@@ -25,22 +25,27 @@ function Template({need, name, image, age, height, holidayCheer }) {
    age="${age}"
    height="${height}"
    holidayCheer="${holidayCheer}"
-   ></trading-card `;
+   ></trading-card> `;
 }
 
-export const Card = Template.bind({});
-  Card.args = {
+
+export const Card = CardTemplate.bind({});
+  Card.ards = {
     need: 'Card',
   }
 
-export const TradingCard = Template.bind({});
+export const TradingCard = CardTemplate.bind({});
 TradingCard.args = {
-  need: 'Trading Card',
-  slot: html`<trading-card></trading-card>  
+ /* need:'Trading Card',
+  name="Buddy The Elf",
+  image="./assets/Elf.jpg",
+  age="30",
+  height="6ft 3",
+  holidayCheer="99",*/
+  slot: html`<trading-card></trading-card>
   `,
-  /*name: "Buddy The Elf",
-  image:"./assets/Elf.jpg",
-  age: "30",
-  height:" 6ft 3",
-  holidayCheer: "99"*/
-};
+}
+
+
+  
+  
