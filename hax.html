@@ -25,13 +25,6 @@
       font-weight: bold;
       padding: 40px;
     }
-    .customCard{
-        color: white;
-        background-color: red;
-        border: solid 10px black;
-        border-radius: 15px;
-
-      }
 
   </style>
   <title>project-3: HAX integration</title>
@@ -47,6 +40,7 @@
   <script src="../../../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
   <script type="module">
     import '../trading-card.js';
+    import  '@lrnwebcomponents/simple-colors/simple-colors.js';
     import "@lrnwebcomponents/h-a-x/h-a-x.js";
     import("@polymer/polymer/lib/utils/settings.js").then((esModule) => {
       esModule.setPassiveTouchGestures(true);
@@ -62,10 +56,13 @@
   <div class="hax-wrapper">
     <h-a-x app-store='{"url": "assets/appstore.json"}' element-align="right">
 
-      <trading-card class="customCard" need="buddy"></trading-card>
-      <trading-card class="customCard" need="mrsClaus"></trading-card>
-      <trading-card class="customCard" need="santa"></trading-card>
-      <trading-card class="customCard" need="grinch"></trading-card>
+      <trading-card need="buddy"></trading-card>
+      
+      <trading-card need="mrsClaus"></trading-card>
+      
+      <trading-card need="santa"></trading-card>
+      
+      <trading-card need="grinch"></trading-card>
 
       <p data-hax-grid="" role="textbox">Cards, stuff and things.</p>
       
