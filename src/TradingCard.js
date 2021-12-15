@@ -114,43 +114,47 @@ export class TradingCard extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: flex;
+        display: block;
         align-items: center;
         background-color: white;
         justify-content: left;
         height: 410px;
-        width: 280px;
+        width: 300px;
         margin: 10px;
       }
       :host([need='buddy']) {
         color: white;
-        background-color: green;
-        border: solid 1px black;
+        background-color: red;
+        border: solid 10px black;
+        border-radius: 15px;
+
       }
       :host([need='mrsClaus']) {
-        color: black;
-        background-color: white;
-        border: dashed 3px red;
+        color: white;
+        background-color: red;
+        border:solid 10px black;
+        border-radius: 15px;
       }
       :host([need='santa']) {
-        color: black;
-        background-color: white;
-        border: dashed 3px green;
+        color: white;
+        background-color: red;
+        border: solid 10px black;
+        border-radius: 15px;
       }
       :host([need='grinch']) {
         color: white;
         background-color: red;
-        border: solid 1px black;
+        border: solid 10px black;
+        border-radius: 15px;
       }
       img {
-        border-radius: 10px;
-        max-width: 100%;
-        max-height: auto;
-        width: 200px;
-        height: 200px;
+        width:250px;
+        height: 250px;
+        display: block;
+        margin: 10px;
       }
       ul {
-        margin: 1px;
+        text-align: left;
       }
     `;
   }

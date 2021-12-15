@@ -39,7 +39,7 @@ export class Traits extends SimpleColors {
         }
         .word {
           text-transform: uppercase;
-          text-align: left;
+          text-align:left;
           color: var(--simple-colors-default-theme-accent-7);
           margin: 0px;
           font-size: 12px;
