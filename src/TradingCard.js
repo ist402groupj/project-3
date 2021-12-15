@@ -148,10 +148,10 @@ export class TradingCard extends LitElement {
         border-radius: 15px;
       }
       img {
-        width:250px;
-        height: 250px;
-        display: block;
-        margin: 10px;
+        width: 300px;
+        height: 260px;
+        display: flex;
+        margin: 0px;
       }
       ul {
         text-align: left;
@@ -165,7 +165,6 @@ export class TradingCard extends LitElement {
       ${this.cardImage.map(
         item =>
           html`
-            <ul>
               <h1 style="text-align:center">${item.name}</h1>
               <img src=${item.image} alt="" />
               <div>
@@ -182,7 +181,6 @@ export class TradingCard extends LitElement {
                 <simple-icon-lite icon="places:ac-unit"></simple-icon-lite>
                 Holiday Cheer: ${item.holidayCheer}
               </div>
-            </ul>
           `
       )}
     `;
