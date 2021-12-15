@@ -116,7 +116,7 @@ export class TradingCard extends LitElement {
       :host {
         display: block;
         align-items: center;
-        background-color: white;
+        background-color: red;
         justify-content: left;
         height: 410px;
         width: 300px;
