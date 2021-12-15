@@ -1,13 +1,13 @@
 {
-    "canScale": false,
-    "canPosition": false,
+    "canScale": true,
+    "canPosition": true,
     "canEditSource": true,
     "contentEditable": true,
     "gizmo": {
       "title": "Trading card",
-      "description": "An element to improve the future of education",
-      "icon": "credit-card",
-      "color": "blue",
+      "description": "An element to display trading card",
+      "icon": "star-border",
+      "color": "red",
       "groups": ["Content", "Education"]
     },
     "settings": {
@@ -26,9 +26,9 @@
       {
         "tag": "trading-card",
         "properties": {
-            "need": "the future"
+            "need": "santa"
         },
-        "content": "<p>Some internal slotted content</p>"
+        "content": "<p>Some holiday trading cards</p>"
       }
     ]
   }
