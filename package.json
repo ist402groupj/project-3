@@ -1,12 +1,12 @@
 {
-  "name": "@lrnwebcomponents/trading-card",
-  "description": "HAX Capable web component to build a better future",
+  "name": "@ist402group19j/trading-card",
+  "description": "Trading card web component to build a better future",
   "license": "Apache-2.0",
-  "author": "btopro",
+  "author": "IST402groupJ",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elmsln/project-3.git"
+    "url": "https://github.com/ist402groupj/project-3"
   },
   "scripts": {
     "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
