@@ -129,12 +129,12 @@ export class TradingCard extends LitElement {
       }
       :host([need='mrsClaus']) {
         color: black;
-        background-color: white;
+        background-color: var(--simple-colors-default-theme-accent-1);
         border: dashed 3px red;
       }
       :host([need='santa']) {
         color: black;
-        background-color: white;
+        background-color: var(--simple-colors-default-theme-accent-1);
         border: dashed 3px green;
       }
       :host([need='grinch']) {
@@ -146,8 +146,8 @@ export class TradingCard extends LitElement {
         border-radius: 10px;
         max-width: 100%;
         max-height: auto;
-        width: 200px;
-        height: 200px;
+        width: 350px;
+        height: 260px;
       }
       ul {
         margin: 1px;
@@ -161,7 +161,7 @@ export class TradingCard extends LitElement {
       ${this.cardImage.map(
         item =>
           html`
-            <ul>
+          <div>
               <h1 style="text-align:center">${item.name}</h1>
               <img src=${item.image} alt="" />
               <div>
@@ -178,7 +178,7 @@ export class TradingCard extends LitElement {
                 <simple-icon-lite icon="places:ac-unit"></simple-icon-lite>
                 Holiday Cheer: ${item.holidayCheer}
               </div>
-            </ul>
+              </div>
           `
       )}
     `;
